@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21.0.6" fx:controller="com.godown.ui.MainController">
+    <!-- Sidebar Menu (already existing) -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #2C3E50; -fx-padding: 15px;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Rice Godown Billing" />
+            <Button style="-fx-background-color: transparent; -fx-text-fill: white;" text="🏠 Dashboard" />
+            <Button fx:id="newBillButton" style="-fx-background-color: transparent; -fx-text-fill: white;" text="📝 New Bill" />
+            <Button fx:id="viewBillsButton" style="-fx-background-color: transparent; -fx-text-fill: white;" text="📜 View Bills" />
+            <Button fx:id="customerButton" style="-fx-background-color: transparent; -fx-text-fill: white;" text="👥 Customers" />
+            <Button fx:id="inventoryButton" style="-fx-background-color: transparent; -fx-text-fill: white;" text="📦 Manage Inventory" />
+        </VBox>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <VBox alignment="center" spacing="20" style="-fx-padding: 20px;">
+            <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Welcome to RICE GODOWN BILLING" />
+            <Label style="-fx-font-size: 14px;" text="Select an option from the left menu" />
+
+            <!-- Add two boxes for total sales -->
+            <HBox alignment="center" spacing="20" style="-fx-padding: 10px;">
+                <!-- Left Box: Today's Sales -->
+                <VBox alignment="center" spacing="10" style="-fx-border-color: black; -fx-border-width: 2; -fx-padding: 10;">
+                    <Label style="-fx-font-weight: bold;" text="Today's Total Sales" />
+                    <Label fx:id="todaySalesLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="0.0" />
+                </VBox>
+
+                <!-- Right Box: This Month's Sales -->
+                <VBox alignment="center" spacing="10" style="-fx-border-color: black; -fx-border-width: 2; -fx-padding: 10;">
+                    <Label style="-fx-font-weight: bold;" text="This Month's Total Sales" />
+                    <Label fx:id="monthSalesLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="0.0" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- Footer Section -->
+    <bottom>
+        <VBox alignment="center" spacing="5" style="-fx-background-color: #34495E; -fx-padding: 10px;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="Developed by Hari Prasath" />
+            <HBox alignment="center" spacing="15">
+                <Hyperlink fx:id="emailLink" style="-fx-text-fill: lightblue;" text="📧 Email" />
+                <Hyperlink fx:id="instagramLink" style="-fx-text-fill: lightblue;" text="📷 Instagram" />
+                <Hyperlink fx:id="linkedinLink" style="-fx-text-fill: lightblue;" text="🔗 LinkedIn" />
+            	<Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="contact: +91 95003 96303" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

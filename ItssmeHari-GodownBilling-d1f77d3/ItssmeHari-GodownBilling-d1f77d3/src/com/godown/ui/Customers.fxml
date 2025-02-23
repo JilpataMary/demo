@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.godown.ui.CustomerController">
+    <VBox spacing="10" alignment="CENTER" prefWidth="600" prefHeight="400">
+        
+        <Label text="Customer Management" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+        
+        <!-- Search bar -->
+        <TextField fx:id="searchField" promptText="Search by Name or Phone Number" onKeyReleased="#onSearch"/>
+
+        <!-- TableView for displaying customer data -->
+        <TableView fx:id="customerTable" prefWidth="580">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="200"/>
+                <TableColumn fx:id="phoneColumn" text="Phone Number" prefWidth="200"/>
+            </columns>
+        </TableView>
+
+        <!-- Buttons for Edit and Delete -->
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Edit" fx:id="editButton" onAction="#onEdit"/>
+            <Button text="Delete" fx:id="deleteButton" onAction="#onDelete"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

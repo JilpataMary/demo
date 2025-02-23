@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.godown.ui.BillController">
+    <VBox spacing="10" alignment="CENTER" prefWidth="400" prefHeight="300">
+        
+        <Label fx:id="dateTimeLabel" text="Date &amp; Time" />
+
+        <Label text="New Bill" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+        
+        <TextField fx:id="mobileNumberField" promptText="Mobile Number"/>
+        <ComboBox fx:id="customerNameField" promptText="Enter Customer Name" />
+        <ComboBox fx:id="riceVarietyField" editable="true" promptText="Rice Variety"/>
+        
+        <!-- Available Stock in one line and centered -->
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Available Stock:" />
+            <Label fx:id="availableStockLabel" text="-" style="-fx-font-weight: bold;" />
+        </HBox>
+        
+        <!-- Price per kg in one line and centered -->
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Price Per kg:" />
+            <Label fx:id="priceLabel" text="0" style="-fx-font-weight: bold;" />
+        </HBox>
+        
+        <TextField fx:id="weightField" promptText="Weight (kg)"/>
+
+        <Label text="Total Price: "/>
+        <Label fx:id="totalPriceLabel" text="0" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+        
+        <Button text="Generate Bill" fx:id="generateBillButton" onAction="#generateBill"/>
+    </VBox>
+</AnchorPane>

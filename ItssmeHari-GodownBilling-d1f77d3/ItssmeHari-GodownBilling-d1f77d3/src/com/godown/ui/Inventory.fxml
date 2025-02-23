@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.godown.ui.InventoryController">
+    <Label fx:id="totalStockLabel" text="Total Stock: 0"/>
+    
+    <!-- TableView to display stock details -->
+    <TableView fx:id="stockTable">
+        <columns>
+            <TableColumn fx:id="varietyColumn" text="Rice Variety"/>
+            <TableColumn fx:id="costColumn" text="Cost(Kg)"/>
+            <TableColumn fx:id="quantityColumn" text="Quantity(Kg) "/>
+            
+        </columns>
+    </TableView>
+    
+    <!-- HBox for arranging buttons side by side -->
+    <HBox spacing="10">
+        <Button fx:id="addStockButton" text="Add Stock"/>
+        <Button fx:id="editStockButton" text="Edit Stock"/>
+        <Button fx:id="deleteStockButton" text="Delete Stock"/>
+    </HBox>
+
+    <VBox fx:id="contentPlaceholder"/>
+</VBox>
